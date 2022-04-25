@@ -1,20 +1,51 @@
-# MGFN
-This is the implementation of Multi-Graph Fusion Networks **(MGFN)** in the following paper: 
+# Multi-Graph Fusion Networks for Urban Region Embedding (IJCAI-22 paper)
+This is the implementation of Multi-Graph Fusion Networks for Urban Region Embedding**(MGFN)** in the following paper: 
 
 Shangbin Wu, Xu Yan, Xiaoliang Fan*, Shirui Pan, Shichao Zhu, Chuanpan Zheng, Ming Cheng, Cheng Wang, Multi-Graph Fusion Networks for Urban Region Embedding, International Joint Conference on Artificial Intelligence (IJCAI-22), July 23-29, 2022 Messe Wien, Vienna, Austria.
 
 Multi-Graph Fusion Networks for Urban Region Embedding (MGFN, https://arxiv.org/pdf/2201.09760.pdf) was accepted by IJCAI-2022.
 
-# Data 
+## Table of Contents
+- [Data](#Data)
+- [Requirements](#Requirements)
+- [QuickStart](#QuickStart)
+- [Citation](#Citation)
+- [Contacts](#Contacts)
+- [Reference](#Reference)
+
+## Data 
 Here we provide the processed data. And the Raw Data can be seen:  
 NYC OpenData: https://opendata.cityofnewyork.us/.  
-We followed the settings in [Zhang et al., 2020] that 
+We followed the settings in [[Zhang et al., 2020]](#R1) that 
 apply taxi trip data as human mobility data and take the crime count, check-in count, land usage type as prediction tasks, respectively.
 
-# Requirements 
+## Requirements 
 Python 3.7.9, pytorch 1.5.1, numpy 1.19.2
 
-# Reference
+## QuickStart
+run the command below to train the MGFN:
+```bash
+python mgfn.py
+```
+
+## Citation
+Please cite our paper in your publications if this code helps your research.
+```
+@article{wu2022multi_graph,
+  title={Multi-Graph Fusion Networks for Urban Region Embedding},
+  author={Wu, Shangbin and Yan, Xu and Fan, Xiaoliang and Pan, Shirui and Zhu, Shichao and Zheng, Chuanpan and Cheng, Ming and Wang, Cheng},
+  journal={arXiv preprint arXiv:2201.09760},
+  year={2022}
+}
+```
+
+## Contacts
+Shangbin Wu, shangbin@stu.xmu.edu.cn
+
+Xiaoliang Fan, fanxiaoliang@xmu.edu.cn, https://fanxlxmu.github.io
+
+## Reference  
+<div><a name="R1"></a>
 [Zhang et al., 2020] Mingyang Zhang, Tong Li, Yong Li,
 and Pan Hui. Multi-view joint graph representation learning for urban region embedding. In Christian Bessiere, ed-
 itor, Proceedings of the Twenty-Ninth International Joint
@@ -22,3 +53,4 @@ Conference on Artificial Intelligence, IJCAI-20, pages
 4431–4437. International Joint Conferences on Artificial
 Intelligence Organization, 7 2020. Special track on AI for
 CompSust and Human well-being.
+</div>

@@ -5,6 +5,7 @@ import torch.optim as optim
 import torch.nn.functional as F
 from tasks import do_tasks
 
+
 class DeepFc(nn.Module):
     def __init__(self, input_dim, output_dim):
         # 输入层，隐藏层*2,输出层.隐藏层节点数目为输入层两倍
@@ -131,6 +132,7 @@ class MGFN(nn.Module):
     def out_feature(self, ):
         return self.feature
 
+
 def pairwise_inner_product(mat_1, mat_2):
     n, m = mat_1.shape  # (180, 144)
     mat_expand = torch.unsqueeze(mat_2, 0)  # (1, 180, 144),
@@ -166,7 +168,7 @@ class SimLoss(nn.Module):
 
 def train_model(input_tensor, label, criterion=None, model=None):
     emb_dim = 96
-    epochs = 5000
+    epochs = 2000
     learning_rate = 0.0005
     weight_decay = 5e-4
     if criterion is None:
@@ -193,7 +195,7 @@ def train_model(input_tensor, label, criterion=None, model=None):
 
 
 if __name__ == '__main__':
-    mob_pattern = np.load("./Data/mob_pattern.npy")
+    mob_pattern = np.load("./Data/mob_patterns.npy")
     mob_adj = np.load("./Data/mob_label.npy")
     mob_pattern = torch.Tensor(mob_pattern)
     mob_adj = torch.Tensor(mob_adj)
