@@ -8,6 +8,17 @@ Multi-Graph Fusion Networks for Urban Region Embedding (MGFN, https://arxiv.org/
 # Data 
 Here we provide the processed data. And the Raw Data can be seen:  
 NYC OpenData: https://opendata.cityofnewyork.us/.  
+We followed the settings in [Zhang et al., 2020] that 
+apply taxi trip data as human mobility data and take the crime count, check-in count, land usage type as prediction tasks, respectively.
 
 # Requirements 
 Python 3.7.9, pytorch 1.5.1, numpy 1.19.2
+
+# Reference
+[Zhang et al., 2020] Mingyang Zhang, Tong Li, Yong Li,
+and Pan Hui. Multi-view joint graph representation learning for urban region embedding. In Christian Bessiere, ed-
+itor, Proceedings of the Twenty-Ninth International Joint
+Conference on Artificial Intelligence, IJCAI-20, pages
+4431–4437. International Joint Conferences on Artificial
+Intelligence Organization, 7 2020. Special track on AI for
+CompSust and Human well-being.
