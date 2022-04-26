@@ -9,6 +9,7 @@ Multi-Graph Fusion Networks for Urban Region Embedding (MGFN, https://arxiv.org/
 - [Data](#Data)
 - [Requirements](#Requirements)
 - [QuickStart](#QuickStart)
+- [These Features are Coming Soon](#These Features are Coming Soon)
 - [Citation](#Citation)
 - [Contacts](#Contacts)
 - [Reference](#Reference)
@@ -26,6 +27,12 @@ run the command below to train the MGFN:
 ```bash
 python mgfn.py
 ```
+
+## These Features are Coming Soon
+The code about...
+- Visualization of mobility pattern
+- Generalization ability analysis
+- Data preprocessing
 
 ## Citation
 Please cite our paper in your publications if this code helps your research.
