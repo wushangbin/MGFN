@@ -89,14 +89,18 @@ class MobilityPatternJointLearning(nn.Module):
         super(MobilityPatternJointLearning, self).__init__()
         self.graph_num = graph_num
         self.node_num = node_num
-        self.num_multi_pattern_encoder = 2
-        self.num_cross_graph_encoder = 2
+        self.num_multi_pattern_encoder = 3
+        self.num_cross_graph_encoder = 1
         self.multi_pattern_blocks = nn.ModuleList(
             [GraphStructuralEncoder(d_model=node_num, nhead=4) for _ in range(self.num_multi_pattern_encoder)])
         self.cross_graph_blocks = nn.ModuleList(
             [GraphStructuralEncoder(d_model=node_num, nhead=4) for _ in range(self.num_cross_graph_encoder)])
         self.fc = DeepFc(self.graph_num*self.node_num, output_dim)
         self.linear_out = nn.Linear(node_num, output_dim)
+        self.para1 = torch.nn.Parameter(torch.FloatTensor(1), requires_grad=True)#the size is [1]
+        self.para1.data.fill_(0.7)
+        self.para2 = torch.nn.Parameter(torch.FloatTensor(1), requires_grad=True)#the size is [1]
+        self.para2.data.fill_(0.3)
         assert node_num % 2 == 0
         self.s_linear = nn.Linear(node_num, int(node_num / 2))
         self.o_linear = nn.Linear(node_num, int(node_num / 2))
@@ -106,8 +110,13 @@ class MobilityPatternJointLearning(nn.Module):
         out = x
         for multi_pattern in self.multi_pattern_blocks:
             out = multi_pattern(out)
+        multi_pattern_emb = out
+        out = out.transpose(0, 1)
         for cross_graph in self.cross_graph_blocks:
             out = cross_graph(out)
+        out = out.transpose(0, 1)
+        out = out*self.para2 + multi_pattern_emb*self.para1
+        out = out.contiguous()
         out = out.view(-1, self.node_num*self.graph_num)
         out = self.fc(out)
         return out
