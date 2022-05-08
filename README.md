@@ -20,7 +20,11 @@ We followed the settings in [[Zhang et al., 2020]](#R1) that
 apply taxi trip data as human mobility data and take the crime count, check-in count, land usage type as prediction tasks, respectively.
 
 ## Requirements 
-Python 3.7.9, pytorch 1.5.1, numpy 1.19.2
+>Python 3.7.9,   
+>pytorch 1.5.1,  
+>numpy 1.19.2,  
+>pandas 0.25.3,  
+>sklearn 0.24.1
 
 ## QuickStart
 run the command below to train the MGFN:

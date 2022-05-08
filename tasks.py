@@ -69,17 +69,22 @@ def lu_classify(emb, display=False):
         print("emb ars: {:.3f}".format(ars))
     return nmi, ars
 
-def do_tasks(embs, ):
-    display=True
-    print("Crime Count Prediction: ")
+
+def do_tasks(embs, display=True):
+    if display:
+        print("Crime Count Prediction: ")
     crime_count_label = np.load("./Data/crime_counts_label.npy")
     crime_count_label = crime_count_label[:, 0]
-    mae, rmse, r2 = predict_regression(embs, crime_count_label, display=display)
+    crime_mae, crime_rmse, crime_r2 = predict_regression(embs, crime_count_label, display=display)
 
-    print("Check-in Prediction: ")
+    if display:
+        print("Check-in Prediction: ")
     check_in_label = np.load("./Data/check_in_label.npy")
-    mae, rmse, r2 = predict_regression(embs, check_in_label, display=display)
+    check_mae, check_rmse, check_r2 = predict_regression(embs, check_in_label, display=display)
 
-    print("Land Usage Prediction: ")
-    lu_classify(embs, display=display)
+    if display:
+        print("Land Usage Prediction: ")
+    nmi, ars = lu_classify(embs, display=display)
+
+    return crime_mae, crime_rmse, crime_r2, check_mae, check_rmse, check_r2, nmi, ars
 
