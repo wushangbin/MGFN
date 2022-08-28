@@ -3,7 +3,7 @@ This is the implementation of Multi-Graph Fusion Networks for Urban Region Embed
 
 Shangbin Wu#, Xu Yan#, Xiaoliang Fan*, Shirui Pan, Shichao Zhu, Chuanpan Zheng, Ming Cheng, Cheng Wang, Multi-Graph Fusion Networks for Urban Region Embedding, International Joint Conference on Artificial Intelligence (IJCAI-22), July 23-29, 2022 Messe Wien, Vienna, Austria.[Acceptance rate=15%]
 
-Multi-Graph Fusion Networks for Urban Region Embedding (MGFN, https://arxiv.org/pdf/2201.09760.pdf) was accepted by IJCAI-2022.
+Multi-Graph Fusion Networks for Urban Region Embedding (MGFN, https://arxiv.org/pdf/2201.09760v1.pdf) was accepted by IJCAI-2022.
 
 ## Table of Contents
 - [Data](#Data)
