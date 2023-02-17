@@ -17,7 +17,7 @@ Multi-Graph Fusion Networks for Urban Region Embedding (MGFN, https://arxiv.org/
 ## Data 
 Here we provide the processed data. And the Raw Data can be found in: NYC OpenData: https://opendata.cityofnewyork.us/.  
 We followed the settings in [[Zhang et al., 2020]](#R1) that 
-apply taxi trip data as human mobility data and take the crime count, check-in count, land usage type as prediction tasks, respectively.
+apply taxi trip data as human mobility data and take the crime count, check-in count, land usage type as prediction tasks, respectively.  
 For New York City zoning dataset, you can contact with Xu Yan(yanxu97@stu.xmu.edu.cn) or Shangbin Wu(shangbin@stu.xmu.edu.cn).
 
 ## Requirements 
