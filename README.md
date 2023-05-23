@@ -26,6 +26,8 @@ For New York City zoning dataset, you can contact with Xu Yan(yanxu97@stu.xmu.ed
 >numpy 1.19.2,  
 >pandas 0.25.3,  
 >sklearn 0.24.1
+>geopandas 0.13.0
+>shapely 2.0.1
 
 ## QuickStart
 run the command below to train the MGFN:
