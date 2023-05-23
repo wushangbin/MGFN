@@ -1,4 +1,5 @@
 import geopandas
+import shapely
 from shapely.geometry import Point
 
 
@@ -33,3 +34,5 @@ def get_zone_id(longitude, latitude):
 if __name__ == '__main__':
     print(get_zone_id("-73.9911117553711", "40.72775650024414"))
     print(get_zone_id(-73.99695587158203, 40.73704147338867))
+    print(geopandas.__version__)
+    print(shapely.__version__)
