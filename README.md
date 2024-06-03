@@ -55,7 +55,7 @@ Please cite our paper in your publications if this code helps your research.
 ## Contacts
 Shangbin Wu, shangbin@stu.xmu.edu.cn
 
-Xiaoliang Fan (corresponding author), fanxiaoliang@xmu.edu.cn, https://fanxlxmu.github.io
+Xiaoliang Fan (corresponding author), fanxiaoliang@xmu.edu.cn, https://xiaoliangfan.github.io
 
 ## Reference  
 <div><a name="R1"></a>
